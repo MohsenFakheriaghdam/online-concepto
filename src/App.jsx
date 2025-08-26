@@ -16,7 +16,7 @@ function App() {
 			<div className="min-w-80 min-h-screen ">
 				<Navbar />
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/online-concepto" element={<HomePage />} />
 					<Route path="/company/:id" element={<CompanyPage />} />
 					<Route path="/aboutus" element={<AboutUs />} />
 				</Routes>
