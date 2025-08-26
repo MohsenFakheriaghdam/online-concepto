@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Vazirmatn, sans-serif;
+}
+
+.fade-in {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(4px);
+}
+
+.input-field:focus {
+	box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.auth-switch {
+	transition: all 0.3s ease;
+}
+
+.auth-switch.active {
+	background-color: #6366f1;
+	color: white;
+}
+
+@layer components {
+	.container {
+		@apply mx-auto max-w-container px-4 md:px-[120px];
+	}
+
+	.gradient-bg {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	}
+	.footer-link:hover {
+		transform: translateX(5px);
+		transition: all 0.3s ease;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fadeIn {
+		animation: fadeIn 0.3s ease-out forwards;
+	}
+
+	.nav-link {
+		position: relative;
+	}
+
+	.nav-link::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: -2px;
+		left: 0;
+		background-color: currentColor;
+		transition: width 0.3s ease;
+	}
+
+	.nav-link:hover::after {
+		width: 100%;
+	}
+
+	.search-input {
+		transition: all 0.3s ease;
+	}
+	.search-input:focus {
+		width: 250px;
+	}
+	.mobile-menu {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
+	}
+	.mobile-menu.open {
+		max-height: 500px;
+	}
+}
+.scroll-container {
+	scrollbar-width: thin;
+	scrollbar-color: #6366f1 #f1f1f1;
+}
+.scroll-container::-webkit-scrollbar {
+	height: 8px;
+}
+.scroll-container::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+	background-color: #6366f1;
+	border-radius: 10px;
+}
+.gradient-bg {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.company-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.company-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.job-card {
+	transition: transform 0.3s ease;
+}
+.job-card:hover {
+	transform: scale(1.05);
+}
+.category-chip {
+	transition: all 0.3s ease;
+}
+.category-chip:hover {
+	background-color: #6366f1;
+	color: white;
+}
+
+.hero-video {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.hero-overlay {
+	background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+.blob-shape {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(60px);
+	opacity: 0.2;
+	z-index: -1;
+}
+
+.team-card {
+	transition: transform 0.3s ease;
+	perspective: 1000px;
+}
+
+.team-card-inner {
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+.team-card:hover .team-card-inner {
+	transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.team-card-back {
+	transform: rotateY(180deg);
+}
+
+.timeline-card {
+	scroll-snap-align: start;
+}
+
+.timeline-container {
+	scroll-snap-type: x mandatory;
+}
+
+.testimonial-card {
+	transition: all 0.3s ease;
+}
+
+.partner-logo {
+	filter: grayscale(100%);
+	opacity: 0.7;
+	transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+.animate-number {
+	transition: all 1s ease-out;
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+	opacity: 1;
+}
+
+@keyframes wave {
+	0% {
+		transform: translateX(0) translateZ(0) scaleY(1);
+	}
+	50% {
+		transform: translateX(-25%) translateZ(0) scaleY(0.8);
+	}
+	100% {
+		transform: translateX(-50%) translateZ(0) scaleY(1);
+	}
+}
+
+.wave-bg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	background-repeat: repeat no-repeat;
+	background-position: 0 bottom;
+	transform-origin: center bottom;
+	animation: wave 10s linear infinite;
+	opacity: 0.1;
+	z-index: -1;
+}
