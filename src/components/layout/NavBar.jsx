@@ -45,13 +45,13 @@ export default function Navbar() {
 				<div className="flex justify-between h-16 ">
 					{/* Logo and main nav */}
 					<div className="flex items-center">
-						<div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate("/")} tabIndex={0}>
+						<div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate("/online-concepto")} tabIndex={0}>
 							<i className="fas fa-cube text-indigo-600 text-2xl mr-2"></i>
 							<span className="text-xl font-bold text-gray-800 ">برند</span>
 						</div>
 						<div className="hidden md:mr-10 lg:flex  md:space-x-reverse md:space-x-6 ">
 							<button
-								onClick={() => navigate("/")}
+								onClick={() => navigate("/online-concepto")}
 								className="text-indigo-600 font-bold border-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm  bg-transparent focus:outline-none"
 							>
 								خانه
@@ -153,7 +153,7 @@ export default function Navbar() {
 					<button
 						onClick={() => {
 							setIsMenuOpen(false);
-							navigate("/");
+							navigate("/online-concepto");
 						}}
 						className="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50 w-full text-right bg-transparent focus:outline-none"
 					>
@@ -162,7 +162,11 @@ export default function Navbar() {
 					{/* <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">
 						محصولات
 					</a> */}
-					<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">
+					<a
+						href="#"
+						onClick={() => navigate("/aboutus")}
+						className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+					>
 						خدمات
 					</a>
 					<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">

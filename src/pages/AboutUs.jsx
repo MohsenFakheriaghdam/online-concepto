@@ -241,8 +241,8 @@ const AboutUsPage = () => {
 				<div className="container mx-auto">
 					<h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">نظرات درباره ما</h2>
 					<div className="relative max-w-4xl mx-auto">
-						<div className="testimonial-slider overflow-hidden">
-							<div className="flex transition-transform duration-300">
+						<div className="testimonial-slider overflow-hidden ">
+							<div className="flex transition-transform duration-300 ">
 								<div className="testimonial-card w-full flex-shrink-0 bg-gray-50 rounded-2xl p-8 shadow-md">
 									<div className="flex items-center mb-6">
 										<img
