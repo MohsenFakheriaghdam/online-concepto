@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const testimonials = [
 	{
@@ -90,13 +91,23 @@ const AboutUsPage = () => {
 	return (
 		<div className="bg-gray-50 text-gray-800 font-[Vazirmatn]" dir="rtl">
 			{/* Hero Section */}
-			<section className="relative h-screen flex items-center justify-center overflow-hidden">
+			<section className="relative h-[500px] flex items-center justify-center overflow-hidden">
 				<video autoPlay muted loop className="hero-video absolute top-0 right-0 w-full h-full object-cover z-[-1]">
 					<source src="https://assets.mixkit.co/videos/preview/mixkit-team-meeting-brainstorming-3880-large.mp4" type="video/mp4" />
 				</video>
-				<div className="hero-overlay absolute inset-0 bg-gradient-to-l from-black/70 to-black/30"></div>
-				<div className="container mx-auto px-6 z-10 text-white text-center">
-					<h1 className="text-4xl md:text-6xl font-bold mb-6">ساختن آینده، با هم</h1>
+				<div className="gradient-bg absolute inset-0 "></div>
+				<div className="container mx-auto px-6 z-10 text-white text-center ">
+					<h1 className="text-4xl md:text-6xl font-bold mb-6">
+						<Typewriter
+							words={["ساختن آینده، با هم", "Mohsen Fakheriaghdam"]}
+							loop={0}
+							cursor
+							cursorStyle="|"
+							typeSpeed={130}
+							deleteSpeed={40}
+							delaySpeed={1500}
+						/>
+					</h1>
 					<p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">ما در ماموریتی برای توانمندسازی نوآوران در سراسر جهان هستیم.</p>
 					<button
 						onClick={() => scrollToSection("story")}
@@ -182,52 +193,62 @@ const AboutUsPage = () => {
 			{/* Team Section */}
 
 			{/* Timeline Section */}
-			<section className="py-20 bg-gray-100">
-				<div className="container mx-auto px-6">
+			<section className="py-20 bg-gray-100 ">
+				<div className="container mx-auto px-6 scroll-container ">
 					<h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">سفر ما</h2>
 					{/* Horizontal Timeline - Always Visible */}
-					<div className="timeline-container overflow-x-auto pb-8 flex">
+					<div className="timeline-container overflow-x-auto pb-8 flex h-[250px]">
 						<div className="flex flex-nowrap gap-6 px-4">
 							{/* Timeline Items */}
 							{/* ...existing code for timeline items... */}
-							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0">
-								<div className="text-indigo-600 font-bold mb-2">1395</div>
-								<h3 className="text-xl font-bold mb-2">تاسیس شرکت</h3>
-								<p className="text-gray-600 text-sm">شروع کار با تیمی 3 نفره در یک دفتر کوچک</p>
-								<div className="mt-4 text-indigo-500">
-									<i className="fas fa-building text-2xl"></i>
+							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div>
+									<h3 className="text-xl font-bold mb-2">تاسیس شرکت</h3>
+									<p className="text-gray-600 text-sm">شروع کار با تیمی 3 نفره در یک دفتر کوچک</p>
+									<div className="mt-4 text-indigo-500">{/* <i className="fas fa-building text-2xl"></i> */}</div>
+								</div>
+								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1395</span>
 								</div>
 							</div>
-							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0">
-								<div className="text-purple-600 font-bold mb-2">1396</div>
-								<h3 className="text-xl font-bold mb-2">اولین سرمایه‌گذاری</h3>
-								<p className="text-gray-600 text-sm">جذب اولین سرمایه‌گذار و گسترش تیم</p>
-								<div className="mt-4 text-purple-500">
-									<i className="fas fa-hand-holding-usd text-2xl"></i>
+							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div>
+									<h3 className="text-xl font-bold mb-2">اولین سرمایه‌گذاری</h3>
+									<p className="text-gray-600 text-sm">جذب اولین سرمایه‌گذار و گسترش تیم</p>
+									<div className="mt-4 text-purple-500">{/* <i className="fas fa-hand-holding-usd text-2xl"></i> */}</div>
+								</div>
+								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer ">
+									<span>1396</span>
 								</div>
 							</div>
-							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0">
-								<div className="text-blue-600 font-bold mb-2">1397</div>
-								<h3 className="text-xl font-bold mb-2">گسترش بین‌المللی</h3>
-								<p className="text-gray-600 text-sm">شروع فعالیت در 5 کشور منطقه</p>
-								<div className="mt-4 text-blue-500">
-									<i className="fas fa-globe-asia text-2xl"></i>
+							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div>
+									<h3 className="text-xl font-bold mb-2">گسترش بین‌المللی</h3>
+									<p className="text-gray-600 text-sm">شروع فعالیت در 5 کشور منطقه</p>
+									<div className="mt-4 text-blue-500">{/* <i className="fas fa-globe-asia text-2xl"></i> */}</div>
+								</div>
+								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1397</span>
 								</div>
 							</div>
-							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0">
-								<div className="text-green-600 font-bold mb-2">1399</div>
-								<h3 className="text-xl font-bold mb-2">برند سال</h3>
-								<p className="text-gray-600 text-sm">دریافت جایزه برترین شتابدهنده استارتاپی</p>
-								<div className="mt-4 text-green-500">
-									<i className="fas fa-award text-2xl"></i>
+							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div>
+									<h3 className="text-xl font-bold mb-2">برند سال</h3>
+									<p className="text-gray-600 text-sm">دریافت جایزه برترین شتابدهنده استارتاپی</p>
+									<div className="mt-4 text-green-500">{/* <i className="fas fa-award text-2xl"></i> */}</div>
+								</div>
+								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1398</span>
 								</div>
 							</div>
-							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0">
-								<div className="text-yellow-600 font-bold mb-2">1401</div>
-								<h3 className="text-xl font-bold mb-2">دور جدید سرمایه‌گذاری</h3>
-								<p className="text-gray-600 text-sm">جذب 10 میلیون دلار سرمایه سری A</p>
-								<div className="mt-4 text-yellow-500">
-									<i className="fas fa-chart-line text-2xl"></i>
+							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div>
+									<h3 className="text-xl font-bold mb-2">دور جدید سرمایه‌گذاری</h3>
+									<p className="text-gray-600 text-sm">جذب 10 میلیون دلار سرمایه سری A</p>
+									<div className="mt-4 text-yellow-500">{/* <i className="fas fa-chart-line text-2xl"></i> */}</div>
+								</div>
+								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1399</span>
 								</div>
 							</div>
 						</div>
@@ -243,7 +264,7 @@ const AboutUsPage = () => {
 					<div className="relative max-w-4xl mx-auto">
 						<div className="testimonial-slider overflow-hidden ">
 							<div className="flex transition-transform duration-300 ">
-								<div className="testimonial-card w-full flex-shrink-0 bg-gray-50 rounded-2xl p-8 shadow-md">
+								<div className="testimonial-card w-full flex-shrink-0 rounded-2xl p-8 shadow-md bg-gray-100">
 									<div className="flex items-center mb-6">
 										<img
 											src={testimonials[currentTestimonial].image}
@@ -283,61 +304,9 @@ const AboutUsPage = () => {
 			</section>
 
 			{/* Partners Section */}
-			<section className="py-20 bg-gray-100">
-				<div className="container mx-auto px-6">
-					<h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">همکاران و شرکای ما</h2>
-					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
-								alt="Google"
-								className="partner-logo h-12 object-contain"
-							/>
-						</div>
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png"
-								alt="Amazon"
-								className="partner-logo h-8 object-contain"
-							/>
-						</div>
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_logo_%282012%29.svg/1200px-Microsoft_logo_%282012%29.svg.png"
-								alt="Microsoft"
-								className="partner-logo h-8 object-contain"
-							/>
-						</div>
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
-								alt="Facebook"
-								className="partner-logo h-10 object-contain"
-							/>
-						</div>
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-								alt="React"
-								className="partner-logo h-12 object-contain"
-							/>
-						</div>
-						<div className="flex items-center justify-center p-4">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
-								alt="SAP"
-								className="partner-logo h-8 object-contain"
-							/>
-						</div>
-					</div>
-					<div className="mt-12 text-center">
-						<p className="text-gray-600">در رسانه‌ها: TechCrunch, Wired, Forbes, Entrepreneur</p>
-					</div>
-				</div>
-			</section>
 
 			{/* CTA Section */}
-			<section className="py-20 bg-gradient-to-l from-purple-600 to-indigo-600 text-white relative overflow-hidden">
+			<section className="py-20 bg-slate-200  text-black relative overflow-hidden">
 				<div className="wave-bg bg-white absolute bottom-0 left-0 w-[200%] h-full opacity-10 z-[-1]"></div>
 				<div className="container mx-auto px-6 text-center relative z-10">
 					<h2 className="text-3xl md:text-4xl font-bold mb-6">آماده‌اید آینده را با ما بسازید؟</h2>
