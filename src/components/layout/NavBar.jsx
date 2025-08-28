@@ -11,6 +11,7 @@ export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [isAuthOpen, setIsAuthOpen] = useState(false);
+	const [activePath, setActivePath] = useState("/online-concepto");
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -47,14 +48,34 @@ export default function Navbar() {
 					<div className="flex items-center">
 						<div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate("/online-concepto")} tabIndex={0}>
 							<i className="fas fa-cube text-indigo-600 text-2xl mr-2"></i>
-							<span className="text-xl font-bold text-gray-800 ">برند</span>
+							<span className="text-xl font-bold text-gray-800 mr-2">کانسپتو</span>
 						</div>
 						<div className="hidden md:mr-10 lg:flex  md:space-x-reverse md:space-x-6 ">
 							<button
-								onClick={() => navigate("/online-concepto")}
-								className="text-indigo-600 font-bold border-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm  bg-transparent focus:outline-none"
+								onClick={() => {
+									setActivePath("/online-concepto");
+									navigate("/online-concepto");
+								}}
+								className={`font-bold inline-flex items-center px-1 pt-1 border-b-2 text-sm bg-transparent focus:outline-none ${
+									activePath === "/online-concepto"
+										? "text-indigo-600 border-indigo-500"
+										: "text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300"
+								}`}
 							>
 								خانه
+							</button>
+							<button
+								onClick={() => {
+									setActivePath("/aboutus");
+									navigate("/aboutus");
+								}}
+								className={`font-bold inline-flex items-center px-1 pt-1 border-b-2 text-sm bg-transparent focus:outline-none ${
+									activePath === "/aboutus"
+										? "text-indigo-600 border-indigo-500"
+										: "text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300"
+								}`}
+							>
+								درباره ما
 							</button>
 							{/* <a
 								href="#"
@@ -62,24 +83,26 @@ export default function Navbar() {
 							>
 								محصولات
 							</a> */}
-							<button
-								onClick={() => navigate("/aboutus")}
-								className="text-gray-500 font-bold hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm bg-transparent focus:outline-none"
+							{/* <button
+								onClick={() => setActivePath("/services")}
+								className={`font-bold inline-flex items-center px-1 pt-1 border-b-2 text-sm bg-transparent focus:outline-none ${
+									activePath === "/services"
+										? "text-indigo-600 border-indigo-500"
+										: "text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300"
+								}`}
 							>
 								خدمات
-							</button>
-							<a
-								href="#"
-								className="text-gray-500 font-bold hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm "
-							>
-								درباره ما
-							</a>
-							<a
-								href="#"
-								className="text-gray-500 font-bold hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm"
+							</button> */}
+							<button
+								onClick={() => setActivePath("/contact")}
+								className={`font-bold inline-flex items-center px-1 pt-1 border-b-2 text-sm bg-transparent focus:outline-none ${
+									activePath === "/contact"
+										? "text-indigo-600 border-indigo-500"
+										: "text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300"
+								}`}
 							>
 								تماس
-							</a>
+							</button>
 						</div>
 					</div>
 
@@ -109,7 +132,7 @@ export default function Navbar() {
 							</button> */}
 							<button
 								onClick={() => setIsAuthOpen(true)}
-								className="px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm"
+								className="px-4 py-2 rounded-md text-sm font-medium bg-[#0E1f4b]  text-[#F1F1F1] transition-colors shadow-sm"
 							>
 								ثبت‌نام / ورود
 							</button>
@@ -152,34 +175,57 @@ export default function Navbar() {
 
 					<button
 						onClick={() => {
+							setActivePath("/online-concepto");
 							setIsMenuOpen(false);
 							navigate("/online-concepto");
 						}}
-						className="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50 w-full text-right bg-transparent focus:outline-none"
+						className={`block px-3 py-2 rounded-md text-base font-medium w-full text-right bg-transparent focus:outline-none ${
+							activePath === "/online-concepto" ? "text-indigo-600 bg-indigo-50" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+						}`}
 					>
 						خانه
 					</button>
-					{/* <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">
-						محصولات
-					</a> */}
-					<a
-						href="#"
-						onClick={() => navigate("/aboutus")}
-						className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+					<button
+						onClick={() => {
+							setActivePath("/aboutus");
+							setIsMenuOpen(false);
+							navigate("/aboutus");
+						}}
+						className={`block px-3 py-2 rounded-md text-base font-medium w-full text-right bg-transparent focus:outline-none ${
+							activePath === "/aboutus" ? "text-indigo-600 bg-indigo-50" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+						}`}
+					>
+						درباره ما
+					</button>
+					<button
+						onClick={() => {
+							setActivePath("/services");
+							setIsMenuOpen(false);
+							/* navigate("/services"); */
+						}}
+						className={`block px-3 py-2 rounded-md text-base font-medium w-full text-right bg-transparent focus:outline-none ${
+							activePath === "/services" ? "text-indigo-600 bg-indigo-50" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+						}`}
 					>
 						خدمات
-					</a>
-					<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">
-						درباره ما
-					</a>
-					<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50">
+					</button>
+					<button
+						onClick={() => {
+							setActivePath("/contact");
+							setIsMenuOpen(false);
+							/* navigate("/contact"); */
+						}}
+						className={`block px-3 py-2 rounded-md text-base font-medium w-full text-right bg-transparent focus:outline-none ${
+							activePath === "/contact" ? "text-indigo-600 bg-indigo-50" : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+						}`}
+					>
 						تماس
-					</a>
+					</button>
 
 					<div className="pt-4 border-t border-gray-200">
 						<button
 							onClick={() => setIsAuthOpen(true)}
-							className="w-full px-4 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm"
+							className="w-full px-4 py-2 rounded-md text-base font-medium  bg-[#0E1f4b]  text-[#F1F1F1] shadow-sm"
 						>
 							ورود / ثبت‌نام
 						</button>

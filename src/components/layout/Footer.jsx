@@ -15,7 +15,7 @@ function Footer() {
 	};
 
 	return (
-		<footer className="gradient-bg text-white pt-12 pb-6 px-4 sm:px-6 lg:px-8">
+		<footer className="bg-[#0E1f4b]  text-[#F1F1F1]  pt-12 pb-6 px-4 sm:px-6 lg:px-8">
 			<div className="max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{/* Company Info */}
@@ -46,7 +46,7 @@ function Footer() {
 							{["خانه", "درباره ما", "خدمات", "قیمت‌گذاری", "بلاگ"].map((link) => (
 								<li key={link}>
 									{link === "خانه" ? (
-										<Link to="/" className="footer-link text-gray-200 hover:text-white flex items-center">
+										<Link to="/online-concepto" className="footer-link text-gray-200 hover:text-white flex items-center">
 											<i className="fas fa-chevron-right text-xs mr-2"></i>
 											{link}
 										</Link>
@@ -92,7 +92,7 @@ function Footer() {
 								/>
 								<button
 									type="submit"
-									className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
+									className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#fec302]  text-[#0E1f4b]  p-2 rounded-md text-sm transition-colors duration-300 flex items-center justify-center"
 								>
 									<i className="fas fa-paper-plane"></i>
 								</button>

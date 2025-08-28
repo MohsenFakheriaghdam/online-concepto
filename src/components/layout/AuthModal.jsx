@@ -111,11 +111,11 @@ export default function AuthModal({ isOpen, onClose }) {
 						</div>
 
 						{/* سوییچ */}
-						<div className="flex mb-6 bg-gray-100 rounded-lg p-1">
+						<div className="flex mb-6 bg-slate-100  text-[#F1F1F1] rounded-lg p-1">
 							<button
 								onClick={() => setIsLogin(true)}
 								className={`flex-1 py-2 px-4 rounded-lg font-medium ${
-									isLogin ? "bg-indigo-600 text-white" : "text-gray-600 hover:text-gray-800"
+									isLogin ? "bg-[#0E1f4b]  text-[#F1F1F1]" : "text-gray-600 hover:text-gray-800"
 								}`}
 							>
 								ورود
@@ -123,7 +123,7 @@ export default function AuthModal({ isOpen, onClose }) {
 							<button
 								onClick={() => setIsLogin(false)}
 								className={`flex-1 py-2 px-4 rounded-lg font-medium ${
-									!isLogin ? "bg-indigo-600 text-white" : "text-gray-600 hover:text-gray-800"
+									!isLogin ? "bg-[#0E1f4b]  text-[#F1F1F1]" : "text-gray-600 hover:text-gray-800"
 								}`}
 							>
 								ثبت‌ نام
@@ -249,7 +249,7 @@ export default function AuthModal({ isOpen, onClose }) {
 							<button
 								type="submit"
 								disabled={isLoading}
-								className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 flex items-center justify-center"
+								className="w-full bg-[#0E1f4b]  text-[#F1F1F1]  font-medium py-2 px-4 rounded-lg transition duration-300 flex items-center justify-center"
 							>
 								{isLoading ? (
 									<>

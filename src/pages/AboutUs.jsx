@@ -3,23 +3,23 @@ import { Typewriter } from "react-simple-typewriter";
 
 const testimonials = [
 	{
-		name: "مینا احمدی",
+		name: "رضا نوری",
 		role: "بنیانگذار استارتاپ تکنولوژی",
-		image: "https://randomuser.me/api/portraits/women/33.jpg",
+		image: "image/profile.png",
 		quote: "همکاری با این تیم نقطه عطفی برای کسب و کار ما بود. آنها نه تنها سرمایه مالی بلکه راهنمایی‌های استراتژیک ارزشمندی ارائه دادند که ما را به سطح جدیدی رساند.",
 		rating: 5,
 	},
 	{
 		name: "رضا نوروزی",
 		role: "مدیر عامل شرکت نرم‌افزاری",
-		image: "https://randomuser.me/api/portraits/men/46.jpg",
+		image: "image/profile.png",
 		quote: "پشتیبانی و شبکه‌ای که این تیم برای ما فراهم کرد، به رشد سریع کسب و کارمان کمک شایانی کرد. واقعاً حرفه‌ای هستند!",
 		rating: 5,
 	},
 	{
-		name: "نرگس فلاحی",
+		name: "علی رضایی",
 		role: "مدیر محصول",
-		image: "https://randomuser.me/api/portraits/women/62.jpg",
+		image: "image/profile.png",
 		quote: "تجربه کار با این تیم فوق‌العاده بود. درک عمیقی از چالش‌های استارتاپ‌ها دارند و راهکارهای عملی ارائه می‌دهند.",
 		rating: 4,
 	},
@@ -95,7 +95,7 @@ const AboutUsPage = () => {
 				<video autoPlay muted loop className="hero-video absolute top-0 right-0 w-full h-full object-cover z-[-1]">
 					<source src="https://assets.mixkit.co/videos/preview/mixkit-team-meeting-brainstorming-3880-large.mp4" type="video/mp4" />
 				</video>
-				<div className="gradient-bg absolute inset-0 "></div>
+				<div className="bg-[#0E1f4b]  text-[#F1F1F1] absolute inset-0 "></div>
 				<div className="container mx-auto px-6 z-10 text-white text-center ">
 					<h1 className="text-4xl md:text-6xl font-bold mb-6">
 						<Typewriter
@@ -111,7 +111,7 @@ const AboutUsPage = () => {
 					<p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">ما در ماموریتی برای توانمندسازی نوآوران در سراسر جهان هستیم.</p>
 					<button
 						onClick={() => scrollToSection("story")}
-						className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300 transform hover:scale-105"
+						className="bg-[#fec302] text-[#0E1f4b]  px-8 py-3 rounded-full text-lg font-medium transition duration-300 transform hover:scale-105"
 					>
 						کشف داستان ما
 					</button>
@@ -202,53 +202,53 @@ const AboutUsPage = () => {
 							{/* Timeline Items */}
 							{/* ...existing code for timeline items... */}
 							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div className=" font-bold mb-2 bg-[#0E1f4b]  text-[#F1F1F1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1395</span>
+								</div>
 								<div>
 									<h3 className="text-xl font-bold mb-2">تاسیس شرکت</h3>
 									<p className="text-gray-600 text-sm">شروع کار با تیمی 3 نفره در یک دفتر کوچک</p>
 									<div className="mt-4 text-indigo-500">{/* <i className="fas fa-building text-2xl"></i> */}</div>
 								</div>
-								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
-									<span>1395</span>
-								</div>
 							</div>
 							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div className=" font-bold mb-2 bg-[#0E1f4b]  text-[#F1F1F1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1397</span>
+								</div>
 								<div>
 									<h3 className="text-xl font-bold mb-2">اولین سرمایه‌گذاری</h3>
 									<p className="text-gray-600 text-sm">جذب اولین سرمایه‌گذار و گسترش تیم</p>
 									<div className="mt-4 text-purple-500">{/* <i className="fas fa-hand-holding-usd text-2xl"></i> */}</div>
 								</div>
-								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer ">
-									<span>1396</span>
-								</div>
 							</div>
 							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div className=" font-bold mb-2 bg-[#0E1f4b]  text-[#F1F1F1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1398</span>
+								</div>
 								<div>
 									<h3 className="text-xl font-bold mb-2">گسترش بین‌المللی</h3>
 									<p className="text-gray-600 text-sm">شروع فعالیت در 5 کشور منطقه</p>
 									<div className="mt-4 text-blue-500">{/* <i className="fas fa-globe-asia text-2xl"></i> */}</div>
 								</div>
-								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
-									<span>1397</span>
-								</div>
 							</div>
 							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div className=" font-bold mb-2 bg-[#0E1f4b]  text-[#F1F1F1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1399</span>
+								</div>
 								<div>
 									<h3 className="text-xl font-bold mb-2">برند سال</h3>
 									<p className="text-gray-600 text-sm">دریافت جایزه برترین شتابدهنده استارتاپی</p>
 									<div className="mt-4 text-green-500">{/* <i className="fas fa-award text-2xl"></i> */}</div>
 								</div>
-								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
-									<span>1398</span>
-								</div>
 							</div>
 							<div className="timeline-card bg-white rounded-2xl p-6 shadow-lg w-64 flex-shrink-0 flex flex-col justify-between">
+								<div className=" font-bold mb-2 bg-[#0E1f4b]  text-[#F1F1F1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
+									<span>1400</span>
+								</div>
 								<div>
 									<h3 className="text-xl font-bold mb-2">دور جدید سرمایه‌گذاری</h3>
 									<p className="text-gray-600 text-sm">جذب 10 میلیون دلار سرمایه سری A</p>
 									<div className="mt-4 text-yellow-500">{/* <i className="fas fa-chart-line text-2xl"></i> */}</div>
-								</div>
-								<div className="text-white font-bold mb-2 bg-[#6366f1] w-full rounded-lg flex items-center justify-center pt-[2px] pb-[2px] cursor-pointer">
-									<span>1399</span>
 								</div>
 							</div>
 						</div>

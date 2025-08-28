@@ -108,7 +108,7 @@ export default function HomePage() {
 			title: "اجلاس سالانه استارتاپ‌ها ۲۰۲۳",
 			date: "۱۵ ژوئن ۲۰۲۳",
 			description: "در بزرگترین گردهمایی نوآوران و سرمایه‌گذاران امسال شرکت کنید",
-			image: "https://via.placeholder.com/300x200",
+			image: "image/event1.jpg",
 		},
 		{
 			id: 2,
@@ -139,7 +139,7 @@ export default function HomePage() {
 		<div className="min-h-screen ">
 			{/* Hero Section */}
 			{/* gradient-bg */}
-			<div className="gradient-bg  text-white py-20 px-4 sm:px-6 lg:px-8 h-[500px] flex items-center justify-center">
+			<div className="bg-[#0E1f4b]  text-[#F1F1F1] py-20 px-4 sm:px-6 lg:px-8 h-[500px] flex items-center justify-center">
 				<div className="max-w-7xl mx-auto text-center">
 					<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
 						<Typewriter
@@ -155,7 +155,6 @@ export default function HomePage() {
 					<p className="text-xl sm:text-2xl opacity-90">کانسپتو اولین مرجع معتبر برای معرفی استارتاپ‌ها و شرکت‌های ایرانی است</p>
 				</div>
 			</div>
-
 			{/* Stats Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center justify-between">
 				<h2 className="mb-10 font-bold max-sm:text-xl md:text-2xl">با ما بهترین تجربه را داشته باشید</h2>
@@ -171,7 +170,6 @@ export default function HomePage() {
 					))}
 				</div>
 			</div>
-
 			{/* Categories Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-50">
 				<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">مرور بر اساس دسته‌بندی</h2>
@@ -189,7 +187,6 @@ export default function HomePage() {
 					))}
 				</div>
 			</div>
-
 			{/* Popular Companies Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 				<div className="flex justify-between items-center mb-8">
@@ -246,7 +243,6 @@ export default function HomePage() {
 					</div>
 				</div>
 			</div>
-
 			{/* Job Opportunities Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-50">
 				<div className="flex justify-between items-center mb-8">
@@ -277,14 +273,13 @@ export default function HomePage() {
 					</div>
 				</div>
 			</div>
-
 			{/* News & Events Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 				<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">آخرین اخبار و رویدادها</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{newsAndEvents.map((item) => (
 						<div key={item.id} className="bg-white rounded-xl shadow-md overflow-hidden">
-							<img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+							{/* <img src={item.image} alt={item.title} className="w-full h-48 object-cover" /> */}
 							<div className="p-6">
 								<div className="text-indigo-600 text-sm mb-2">{item.date}</div>
 								<h3 className="font-bold text-xl mb-2">{item.title}</h3>
