@@ -5,21 +5,21 @@ const testimonials = [
 	{
 		name: "رضا نوری",
 		role: "بنیانگذار استارتاپ تکنولوژی",
-		image: "image/profile.png",
+		image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
 		quote: "همکاری با این تیم نقطه عطفی برای کسب و کار ما بود. آنها نه تنها سرمایه مالی بلکه راهنمایی‌های استراتژیک ارزشمندی ارائه دادند که ما را به سطح جدیدی رساند.",
 		rating: 5,
 	},
 	{
 		name: "رضا نوروزی",
 		role: "مدیر عامل شرکت نرم‌افزاری",
-		image: "image/profile.png",
+		image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		quote: "پشتیبانی و شبکه‌ای که این تیم برای ما فراهم کرد، به رشد سریع کسب و کارمان کمک شایانی کرد. واقعاً حرفه‌ای هستند!",
 		rating: 5,
 	},
 	{
 		name: "علی رضایی",
 		role: "مدیر محصول",
-		image: "image/profile.png",
+		image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		quote: "تجربه کار با این تیم فوق‌العاده بود. درک عمیقی از چالش‌های استارتاپ‌ها دارند و راهکارهای عملی ارائه می‌دهند.",
 		rating: 4,
 	},
@@ -265,7 +265,7 @@ const AboutUsPage = () => {
 						<div className="testimonial-slider overflow-hidden ">
 							<div className="flex transition-transform duration-300 ">
 								<div className="testimonial-card w-full flex-shrink-0 rounded-2xl p-8 shadow-md bg-gray-100">
-									<div className="flex items-center mb-6">
+									<div className="flex items-center mb-6 ">
 										<img
 											src={testimonials[currentTestimonial].image}
 											alt={testimonials[currentTestimonial].name}
